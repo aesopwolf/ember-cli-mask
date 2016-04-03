@@ -1,0 +1,4 @@
+- setup demo at https://aesopwolf.github.io/ember-cli-mask
+- create tests
+- setup travis-ci testing
+- publish
