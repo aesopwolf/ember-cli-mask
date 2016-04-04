@@ -10,13 +10,8 @@ cache:
     - node_modules
 
 env:
-  - EMBER_TRY_SCENARIO=default
-  - EMBER_TRY_SCENARIO=ember-1.13
-  - EMBER_TRY_SCENARIO=ember-release
-  - EMBER_TRY_SCENARIO=ember-beta
-  - EMBER_TRY_SCENARIO=ember-canary
-  - SAUCE_USERNAME=aesopwolf
-  - SAUCE_ACCESS_KEY=2d7d01c9-eb84-464e-888b-d5f12e7e5c12
+  - SAUCE_USERNAME="aesopwolf"
+  - SAUCE_ACCESS_KEY="2d7d01c9-eb84-464e-888b-d5f12e7e5c12"
 
 matrix:
   fast_finish: true
@@ -34,7 +29,7 @@ install:
   - bower install
 
 script:
-  - ember try $EMBER_TRY_SCENARIO test
+  - ember test
 
 before_script:
   - ember sauce:connect
