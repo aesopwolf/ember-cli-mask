@@ -404,7 +404,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("dummy/app")["default"].create({"name":"ember-cli-mask","version":"1.0.0+b46c8199"});
+  require("dummy/app")["default"].create({"name":"ember-cli-mask","version":"1.0.0+ecca36cb"});
 }
 
 /* jshint ignore:end */
