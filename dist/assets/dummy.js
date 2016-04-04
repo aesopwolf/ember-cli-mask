@@ -244,7 +244,7 @@ define("dummy/templates/application", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 17,
+            "line": 16,
             "column": 0
           }
         },
@@ -299,7 +299,7 @@ define("dummy/templates/application", ["exports"], function (exports) {
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("br");
         dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n\n    ");
+        var el4 = dom.createTextNode("\n    ");
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
@@ -404,7 +404,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("dummy/app")["default"].create({"name":"ember-cli-mask","version":"1.0.0+ecca36cb"});
+  require("dummy/app")["default"].create({"name":"ember-cli-mask","version":"1.0.0+054a4cae"});
 }
 
 /* jshint ignore:end */
