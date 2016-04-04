@@ -67105,6 +67105,13 @@ define('ember-cli-mask/components/input-mask', ['exports', 'ember'], function (e
     attributeBindings: ['readonly', 'required', 'autofocus', 'value', 'placeholder', 'disabled', 'size', 'tabindex', 'maxlength', 'name', 'min', 'max', 'pattern', 'accept', 'autocomplete', 'autosave', 'formaction', 'formenctype', 'formmethod', 'formnovalidate', 'formtarget', 'height', 'inputmode', 'multiple', 'step', 'width', 'form', 'selectionDirection', 'spellcheck', 'type'],
     _mask: { props: {} },
 
+    didInsertElement: function didInsertElement() {
+      this._super.apply(this, arguments);
+      if (!this.get('type')) {
+        this.element.setAttribute('type', 'text');
+      }
+    },
+
     validType: function validType() {
       if (this.get('mask') && ALLOWED_TYPES.indexOf(this.get('type') || 'text') > -1) {
         return true;
