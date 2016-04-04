@@ -4,6 +4,8 @@ Demo: https://aesopwolf.github.io/ember-cli-mask
 
 _ember-cli-mask_ is an ember component that adds masking to `<input>` elements.
 
+![Demo](https://raw.githubusercontent.com/aesopwolf/ember-cli-mask/screenshots/demo.gif?raw=true "Gif of ember-cli-mask being demoed")
+
 ## Installation
 
 * `ember install ember-cli-mask`
