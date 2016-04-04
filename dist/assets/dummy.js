@@ -234,8 +234,7 @@ define("dummy/templates/application", ["exports"], function (exports) {
     return {
       meta: {
         "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
+          "name": "triple-curlies"
         },
         "revision": "Ember@2.4.3",
         "loc": {
@@ -245,7 +244,7 @@ define("dummy/templates/application", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 4,
+            "line": 17,
             "column": 0
           }
         },
@@ -257,35 +256,71 @@ define("dummy/templates/application", ["exports"], function (exports) {
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("br");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("br");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("br");
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "container");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2, "class", "row");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3, "class", "12 columns");
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("h1");
+        var el5 = dom.createTextNode("ember-cli-mask demo");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("p");
+        var el5 = dom.createElement("a");
+        dom.setAttribute(el5, "href", "https://github.com/aesopwolf/ember-cli-mask");
+        var el6 = dom.createTextNode("https://github.com/aesopwolf/ember-cli-mask");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createComment("");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("br");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createComment("");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("br");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createComment("");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("br");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var element0 = dom.childAt(fragment, [0, 1, 1]);
         var morphs = new Array(3);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        morphs[1] = dom.createMorphAt(fragment, 3, 3, contextualElement);
-        morphs[2] = dom.createMorphAt(fragment, 6, 6, contextualElement);
-        dom.insertBoundary(fragment, 0);
+        morphs[0] = dom.createMorphAt(element0, 5, 5);
+        morphs[1] = dom.createMorphAt(element0, 8, 8);
+        morphs[2] = dom.createMorphAt(element0, 11, 11);
         return morphs;
       },
-      statements: [["inline", "input-mask", [], ["mask", "99/99/9999", "placeholder", "01/01/1900", "type", "text"], ["loc", [null, [1, 0], [1, 69]]]], ["inline", "input-mask", [], ["mask", "(999) 999-9999", "placeholder", "Phone number"], ["loc", [null, [2, 0], [2, 63]]]], ["inline", "input-mask", [], ["mask", "9A**999", "placeholder", "CA license plate"], ["loc", [null, [3, 0], [3, 60]]]]],
+      statements: [["inline", "input-mask", [], ["class", "u-full-width", "mask", "99/99/9999", "placeholder", "01/01/1900", "type", "text"], ["loc", [null, [8, 6], [8, 96]]]], ["inline", "input-mask", [], ["class", "u-full-width", "mask", "(999) 999-9999", "placeholder", "Phone number"], ["loc", [null, [10, 6], [10, 90]]]], ["inline", "input-mask", [], ["class", "u-full-width", "mask", "9A**999", "placeholder", "CA license plate"], ["loc", [null, [12, 6], [12, 87]]]]],
       locals: [],
       templates: []
     };
@@ -369,7 +404,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("dummy/app")["default"].create({"name":"ember-cli-mask","version":"1.0.0+e41dbf7d"});
+  require("dummy/app")["default"].create({"name":"ember-cli-mask","version":"1.0.0+b46c8199"});
 }
 
 /* jshint ignore:end */
