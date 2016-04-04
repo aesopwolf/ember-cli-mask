@@ -45,6 +45,13 @@ export default Ember.Component.extend({
   ],
   _mask: { props: {} },
 
+  didInsertElement() {
+    this._super(...arguments);
+    if(!this.get('type')) {
+      this.element.setAttribute('type', 'text');
+    }
+  },
+
   validType() {
     if (this.get('mask') && ALLOWED_TYPES.indexOf(this.get('type') || 'text') > -1) {
       return true;
