@@ -1,3 +1,1 @@
-- create tests
-- setup travis-ci testing
-- make demo better looking
+- write more acceptance tests

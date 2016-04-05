@@ -4,6 +4,8 @@ Demo: https://aesopwolf.github.io/ember-cli-mask
 
 _ember-cli-mask_ is an ember component that adds masking to `<input>` elements.
 
+This component is a port of https://github.com/borbit/react-mask-mixin and has zero dependencies (no jQuery).
+
 ![Demo](https://raw.githubusercontent.com/aesopwolf/ember-cli-mask/screenshots/demo.gif?raw=true "Gif of ember-cli-mask being demoed")
 
 ## Installation
@@ -29,13 +31,15 @@ You can use `{{input-mask}}` anywhere in an `.hbs` file
 
 **Supported types**
 
-The default input type is "text" if you don't specify one. You can also use:
+The following are valid `type` attributes:
 
 - text
 - search
 - url
 - tel
 - password
+
+The component will automatically set `type="text"` if you don't specify one yourself.
 
 ## License
 
