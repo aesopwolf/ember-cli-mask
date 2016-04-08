@@ -16,7 +16,7 @@ This component is a port of https://github.com/borbit/react-mask-mixin and has z
 
 You can use `{{input-mask}}` anywhere in an `.hbs` file
 
-```
+```hbs
 {{input-mask mask="99/99/9999" placeholder="01/01/1900" type="text"}}
 {{input-mask mask="(999) 999-9999" placeholder="Phone number"}}
 {{input-mask mask="9A**999" placeholder="CA license plate"}}
