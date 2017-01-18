@@ -50,6 +50,12 @@ export default Ember.Component.extend({
     if(!this.get('type')) {
       this.element.setAttribute('type', 'text');
     }
+    if (this.get('value')) {
+      var input = document.getElementById(this.id);
+      this.processValue(this.get('value').toString(), function(mask) {
+        input.value = mask.props.value;
+      });
+    }
   },
 
   validType() {
