@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mask",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Ember component that adds masking to form <input> elements",
   "directories": {
     "doc": "doc",
