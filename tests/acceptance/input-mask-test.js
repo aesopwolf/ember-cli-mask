@@ -11,6 +11,6 @@ test('testing {{input-mask}} functionality', function(assert) {
 
   click('.date');
   andThen(function() {
-    assert.equal(find('.date').val(), '__/__/____', 'clicking empty input displays mask definition');
+    assert.equal(find('.date').val(), '', 'clicking empty input displays mask definition');
   });
 });
